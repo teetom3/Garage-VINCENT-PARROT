@@ -34,34 +34,28 @@ if(isset($_SESSION['user-id'])) {
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav  >
-        <div class="container nav__container" >
-            <a href="<?= ROOT_URL ?>" class="nav__logo">EGATOR</a>
-                <ul class="nav__items">
-                    <li><a href="<?= ROOT_URL ?>blog.php">Blog</a></li>
-                    <li><a href="<?= ROOT_URL ?>about.php">About</a></li>
-                    <li><a href="<?= ROOT_URL ?>services.php">Services</a></li>
-                    <li><a href="<?= ROOT_URL ?>contact.php">Contact</a></li>
-                    <?php if(isset($_SESSION['user-id'])):?>
-                  <li class="nav__profile">
-                <div class="avatar">
-                    <img src="<?= ROOT_URL . 'images/' . $avatar['avatar'] ?>">
-                   
-                </div> 
-
-                        <ul>
-                            <li><a href="<?= ROOT_URL ?>admin/index.php">Dashboard</a></li>
-                            <li><a href="<?= ROOT_URL ?>logout.php">Logout</a></li>
-                        </ul>
-                    </li>
-                    <?php else : ?>
-                    <li><a href="<?= ROOT_URL ?>signin.php">Signin</a></li>
-                    <?php endif ?>
-                </ul>
-                </ul>
-                <button id="open__nav-btn"><i class="uil uil-bars"></i></button>
-                <button id="close__nav-btn"><i class="uil uil-multiply"></i></button>
-        </div>
-    </nav>
+ 
    
     <!--     ===================== END OF THE NAV=========================-->
+
+
+    <nav class="navbar">
+  <div class="navbar-left">
+    <span class="brand">VINCENT PARROT</span>
+  </div> 
+  <div class="navbar-right">
+    <ul class="nav-links">
+      <li><a href="#">Véhicules d'occasion</a></li>
+      <li><a href="#">Nos services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Avis</a></li>
+      <li><a href="#">Connexion</a></li>
+    </ul>
+    
+    
+  </div>
+  <div class="nav-bar-buttons">
+    <button id="open__nav-btn"><i class="uil uil-bars"></i></button>
+    <button id="close__nav-btn"><i class="uil uil-multiply"></i></button>
+  </div>
+</nav>
