@@ -1,0 +1,355 @@
+body{
+    background: #ebe0e0;
+}
+
+/*     NAV BAR    */
+ 
+.navbar {
+    background-color: black;
+    color: #F2F2F2;
+    font-family: 'RAJDHANI', sans-serif;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-right li {
+    margin-left: 20px;
+  }
+  
+  .navbar-right a {
+    color: #F2F2F2;
+    text-decoration: none;
+  }
+  
+  .navbar-right a:hover {
+    text-decoration: underline;
+  }
+
+
+/* SECTION PRESENTATION */ 
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Ajustez cette valeur en fonction de la taille de votre image */
+    margin-top: 100px; /* Pour laisser plus d'espace entre la navbar et la section */
+    display: flex;
+    align-items: center;
+    background-color: #d6d4d4; /* Couleur d'arrière-plan modifiée */
+  }
+  
+  .hero img {
+    width: 50%; /* La moitié de la largeur de la section */
+    height: auto;
+    object-fit: cover;
+    border: 8px solid #333333; /* Cadre rouge transparent */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Ombre */
+  }
+  
+  .hero-text {
+    width: 50%; /* La moitié de la largeur de la section */
+    padding: 20px;
+    font-family: 'BARLOW';
+    border: 8px solid #333333; /* Cadre rouge transparent */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Ombre */
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text p {
+    font-size: 1.2em;
+
+
+
+
+
+
+
+  }
+  /***************************************************** SECTION SERVICES ******************************************************/
+
+  .services-banner{
+  text-align: center;
+  background-color: #333333; /* Gris foncé */
+  color: #FFFFFF;
+  padding: 30px 0;
+  font-family: 'Barlow', sans-serif;
+  margin-top: 7rem;
+}
+
+.services-banner h2{
+  font-size: 2em;
+}
+
+
+  .services {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px; /* Espacement entre la bannière et les cards */
+}
+
+.service-card{
+  width: 30%; /* Largeur de chaque card */
+  background-color: rgba(255, 255, 255, 0.8); /* Fond blanc transparent */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Ombrage autour de la card */
+}
+
+.service-card h2 {
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+}
+
+.service-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0; /* Coins arrondis uniquement en haut */
+}
+
+.service-card p{
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.2em;
+}
+
+  
+  /*********************** VEHICULE D'OCCASION ************************/
+
+  .vehicle-sales-banner {
+    text-align: center;
+    background-color: #333333; /* Gris foncé */
+    color: #FFFFFF;
+    padding: 30px 0;
+    font-family: 'Barlow', sans-serif;
+  }
+  
+  .vehicle-sales-banner h2 {
+    font-size: 2em;
+  }
+  
+  .vehicle-sales {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Espacement entre la bannière et les cards de voitures */
+  }
+  
+  .vehicle-card {
+    width: 30%; /* Largeur de chaque card */
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc transparent */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Ombrage autour de la card */
+  }
+  
+  .vehicle-card h3 {
+    text-align: center;
+  }
+  
+  .vehicle-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0; /* Coins arrondis uniquement en haut */
+  }
+  
+  .vehicle-card p {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.2em;
+  }
+  
+
+
+  /*********************************** AVIS CLIENTS ****************************************************************/
+
+
+  .testimonial-section {
+    padding: 30px 0;
+  }
+  
+  .testimonial-banner {
+    text-align: center;
+    background-color: #D94350; /* Couleur de la bannière */
+    color: #FFFFFF; /* Couleur du texte */
+    padding: 20px 0;
+  }
+  
+  .testimonial-banner h2 {
+    font-size: 2em;
+    font-family: 'Barlow', sans-serif;
+  }
+  
+  .testimonial-cards {
+    margin-top: 20px; /* Espacement entre la bannière et les cards */
+    display: flex;
+    
+     /* Permettre le passage à la ligne */
+    justify-content: space-between; /* Espacement égal entre les cards */
+  }
+  
+  .testimonial-card {
+    width: calc(33.33% - 20px); /* Largeur de chaque card, moins la marge */
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc transparent */
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Ombrage autour de la card */
+  }
+  
+  .stars {
+    text-align: center;
+    color: #FFD700; /* Couleur jaune pour les étoiles */
+    font-size: 24px; /* Taille des étoiles */
+  }
+  
+  .testimonial-card h3 {
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1.2em;
+  }
+  
+  .testimonial-card p {
+    text-align: center;
+  }
+  
+  
+  
+  
+  
+  /*****************************   FOOTER STYLE ****************************************/  
+
+  .footer {
+    background-color: #333; /* Couleur de fond gris foncé */
+    color: #fff; /* Couleur du texte blanc */
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Barlow', sans-serif;
+  }
+  
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .opening-hours,
+  .footer__container article {
+    flex: 1 1 20%; /* Chaque colonne prend 20% de l'espace */
+  }
+  
+  .opening-hours h4,
+  .footer__container h4 {
+    color: #fff; /* Couleur du titre blanc */
+  }
+  
+  .opening-hours p {
+    margin-bottom: 10px;
+  }
+  
+  .footer__container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer__container ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer__container ul li a {
+    color: #fff; /* Couleur des liens blancs */
+    text-decoration: none;
+  }
+  
+  .footer__container ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer__copyright {
+    margin-top: 20px;
+  }
+  
+  
+
+  /*************** MEDIA QUERYS ****************************************************************/
+
+
+  /***************************TABLETTE *************************************/ 
+
+  /* Media query pour les tablettes */
+@media screen and (max-width: 1024px) {
+    /* NAV BAR */
+    .navbar {
+      padding: 20px; /* Réduire l'espacement */
+    }
+    .navbar-right ul {
+      flex-direction: column; /* Afficher les liens verticalement */
+    }
+    .navbar-right li {
+      margin-left: 0; /* Supprimer la marge entre les liens */
+      margin-bottom: 10px; /* Ajouter de l'espace entre les liens */
+    }
+  
+    /* SECTION PRESENTATION */
+    .hero {
+      height: auto; /* Ajuster la hauteur automatiquement */
+      flex-direction: column; /* Afficher le texte en dessous de l'image */
+      align-items: center; /* Centrer le contenu */
+    }
+    .hero img,
+    .hero-text {
+      width: 100%; /* Occupera toute la largeur */
+      border: none; /* Supprimer le cadre et l'ombre */
+      box-shadow: none;
+    }
+  
+    /* SECTION SERVICES */
+    .services-banner h2,
+    .services-banner {
+      padding: 20px 0; /* Ajuster le rembourrage */
+    }
+    .service-card {
+      width: 45%; /* Ajuster la largeur des cards */
+    }
+  
+    /* SECTION VEHICULES */
+    .vehicle-sales-banner h2,
+    .vehicle-sales-banner {
+      padding: 20px 0; /* Ajuster le rembourrage */
+    }
+    .vehicle-card {
+      width: 45%; /* Ajuster la largeur des cards */
+    }
+  
+    /* SECTION AVIS CLIENTS */
+    .testimonial-banner h2,
+    .testimonial-banner {
+      padding: 20px 0; /* Ajuster le rembourrage */
+    }
+    .testimonial-cards {
+      flex-direction: column; /* Afficher les cards en colonne */
+    }
+    .testimonial-card {
+      width: 100%; /* Occupera toute la largeur */
+    }
+  }
+  
