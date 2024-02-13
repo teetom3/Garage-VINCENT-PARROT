@@ -4,11 +4,11 @@ include 'partials/header.php'
 
 
 <div class="login-container">
-    <form class="login-form">
+    <form class="login-form" action="<?ROOT_URL?>signin-logic.php" method="POST">
         <h2>Connexion</h2>
         <div class="input-group">
-            <label for="username">Nom d'utilisateur ou email</label>
-            <input type="text" id="username" name="username" placeholder="Entrez votre nom d'utilisateur ou email" required>
+            <label for="username">Email</label>
+            <input type="text" id="username" name="email" placeholder="Entrez votre email" required>
         </div>
         <div class="input-group">
             <label for="password">Mot de passe</label>

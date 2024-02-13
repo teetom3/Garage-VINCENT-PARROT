@@ -9,11 +9,11 @@ include 'partials/header.php';
     <form class="formulaire" action="ajouter_utilisateur.php" method="POST">
         <div class="form-group">
             <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
+            <input type="text" id="nom" name="lastname" required>
         </div>
         <div class="form-group">
             <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="prenom" required>
+            <input type="text" id="prenom" name="firstname" required>
         </div>
         <div class="form-group">
             <label for="email">Adresse email :</label>
@@ -21,9 +21,9 @@ include 'partials/header.php';
         </div>
         <div class="form-group">
             <label for="motdepasse">Mot de passe :</label>
-            <input type="password" id="motdepasse" name="motdepasse" required>
+            <input type="password" id="motdepasse" name="password" required>
         </div>
-        <button type="submit">Ajouter</button>
+        <button type="submit" name="submit">Ajouter</button>
     </form>
 
 
