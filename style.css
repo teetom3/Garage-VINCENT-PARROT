@@ -6,6 +6,15 @@
   text-decoration: none;
 }
 
+
+h2{
+  font-family: "BARLOW";
+  text-align: center;
+}
+
+
+/*************************NAV BAR *****************************/
+
 nav{
 
  
@@ -378,6 +387,8 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 button:hover {
@@ -536,6 +547,11 @@ textarea {
 
 /* Style du tableau */
 
+.dashboard {
+  margin: 40px;
+  padding: 10px;
+}
+
 .dashboard h2 {
   font-family: "BARLOW";
 }
@@ -586,7 +602,16 @@ tr:nth-child(odd) {
   }
 }
 
+/******FORMULAIRE *************************************/ 
 
+.formulaire {
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  text-align: center;
+
+}
 
   /*************** MEDIA QUERYS ****************************************************************/
 
