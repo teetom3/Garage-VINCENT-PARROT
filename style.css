@@ -381,11 +381,212 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #19191a;
 }
 
   
-  
+  /********** PAGE VEHICULES *****************/ 
+
+/* Style pour la section de recherche */
+.vehicule_search {
+  margin-top: 20px; /* Marge en haut de la section */
+  margin-bottom: 20px; /* Marge en bas de la section */
+}
+
+/* Style pour la barre de recherche de texte */
+.vehicule_search input[type="text"],
+.vehicule_search select {
+  width: 200px; /* Largeur des champs de recherche */
+  padding: 10px; /* Padding autour des champs de recherche */
+  margin-right: 10px; /* Marge à droite des champs de recherche */
+  border: 1px solid #ccc; /* Bordure grise */
+  border-radius: 5px; /* Coins arrondis */
+  font-family: 'RAJDHANI', sans-serif; /* Police de caractères */
+  font-size: 16px; /* Taille du texte */
+  outline: none; /* Suppression du contour bleu lors du focus */
+}
+
+/* Style pour les boutons de recherche */
+.vehicule_search button[type="submit"] {
+  padding: 10px 20px; /* Padding autour du bouton */
+  border: none; /* Suppression de la bordure */
+  border-radius: 5px; /* Coins arrondis */
+  background-color: #313030; /* Couleur de fond grise */
+  color: #fff; /* Couleur du texte blanc */
+  font-family: 'RAJDHANI', sans-serif; /* Police de caractères */
+  font-size: 16px; /* Taille du texte */
+  cursor: pointer; /* Curseur pointeur au survol */
+}
+
+/* Style pour les boutons de recherche au survol */
+.vehicule_search button[type="submit"]:hover {
+  background-color: #999; /* Couleur de fond plus foncée au survol */
+}
+
+
+/**********************FORMULAIRE DE CONTACT *********************************/
+
+.contact-form {
+  margin: 50px auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 150px;
+}
+
+
+/*******************************PAGE AVIS ***************************/ 
+
+
+.reviews-section {
+  margin: 50px auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reviews-section h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.review-form .form-group {
+  margin-bottom: 20px;
+}
+
+.review-form .form-group label {
+  display: block;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.review-form input[type="number"],
+.review-form input[type="text"],
+.review-form input[type="email"],
+.review-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.review-form textarea {
+  height: 150px;
+}
+
+.review-form button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background-color: #555;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.review-form button[type="submit"]:hover {
+  background-color: #333;
+}
+
+
+/*****************DASHBOARD ***************/
+
+/* Style du tableau */
+
+.dashboard h2 {
+  font-family: "BARLOW";
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Barlow", sans-serif;
+}
+
+/* Style des cellules du tableau */
+td, th {
+  border: 1px solid #333; /* Bordure de 1px solide gris foncé */
+  padding: 8px; /* Espacement interne des cellules */
+}
+
+/* Style des entêtes de colonne */
+th {
+  background-color: #333; /* Fond gris foncé pour les entêtes de colonne */
+  color: white; /* Texte blanc pour les entêtes de colonne */
+}
+
+/* Style des lignes impaires */
+tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Fond gris clair pour les lignes impaires */
+}
+
+/* Style pour rendre le tableau responsive */
+@media screen and (max-width: 600px) {
+  /* Rétablir la bordure uniquement sur les cellules nécessaires */
+  td, th {
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+    display: table-cell; /* Maintenir les cellules en ligne */
+  }
+
+  /* Style des lignes impaires */
+  tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Fond gris clair pour les lignes impaires */
+  }
+
+  /* Entête de colonne */
+  th {
+    background-color: #333;
+    color: white;
+    text-align: left;
+  }
+}
+
+
 
   /*************** MEDIA QUERYS ****************************************************************/
 
@@ -450,6 +651,27 @@ button:hover {
     }
     .testimonial-card {
       width: 100%; /* Occupera toute la largeur */
+    }
+  
+  
+    /* Rétablir la bordure uniquement sur les cellules nécessaires */
+    td, th {
+      border: none;
+      border-bottom: 1px solid #333;
+      padding: 10px;
+      display: table-cell; /* Maintenir les cellules en ligne */
+    }
+  
+    /* Style des lignes impaires */
+    tr:nth-child(odd) {
+      background-color: #f2f2f2; /* Fond gris clair pour les lignes impaires */
+    }
+  
+    /* Entête de colonne */
+    th {
+      background-color: #333;
+      color: white;
+      text-align: left;
     }
   }
   
