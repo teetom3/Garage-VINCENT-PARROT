@@ -1,53 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--------- FONT FAMILY PRECONNECT-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:wght@100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<!------------ICONS PRECONNECT-->
-<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-
-
-<!-------------CONNECT STYLE SHEET-->
-<link href="style.css" rel="stylesheet">
-
-    <title>GARAGE VINCENT PARROT</title>
-</head>
-<body>
-   
-
-
-<nav >
- 
-    <ul class="sidebar">
-      <li class="btn_close"><a href="#" ><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-      <li><a href="#">Véhicules d'occasion</a></li>
-      <li><a href="#">Nos services</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Avis</a></li>
-      <li><a href="#">Connexion</a></li>
-    </ul>
-
-    <ul class="navlist">
-      <li><a href="index.html" >VINCENT PARROT</a></li>
-      <li class="hideOnMobile"><a href="#">Véhicules d'occasion</a></li>
-      <li class="hideOnMobile"><a href="#">Nos services</a></li>
-      <li class="hideOnMobile"><a href="#">Contact</a></li>
-      <li class="hideOnMobile"><a href="#">Avis</a></li>
-      <li class="hideOnMobile"><a href="#">Connexion</a></li>
-      <li class="btn_nav"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
-    </ul>
-    
-</nav>
-
+<?php 
+include 'partials/header.php'
+?>
 
 
 
@@ -199,67 +152,6 @@
   </section>
   
   
-  <!-----------DEBUT DU FOOTER  ---------------->
-  <footer class="footer">
-    <div class="container footer__container">
-
-        <div class="opening-hours">
-            <h4>Horaires d'ouverture</h4>
-            <p>Lundi - Vendredi: 8h00 - 18h00</p>
-            <p>Samedi: 9h00 - 16h00</p>
-            <p>Dimanche: Fermé</p>
-          </div>
-
-          
-      <article>
-        <h4>Services </h4>
-        <ul>
-          <li><a href="">Vidange</li>
-          <li><a href="">Réparaiton mécanique</a></li>
-          <li><a href="">Pneu</a></li>
-          <li><a href="">Vente de véhicule d'occasion</a></li>
-          
-        </ul>
-      </article>
-      <article>
-        <h4>Support </h4>
-        <ul>
-          <li><a href="">Online Support</a></li>
-          <li><a href="">Call numbers</a></li>
-          <li><a href="">E-mails</a></li>
-          <li><a href="">Social Support</a></li>
-          <li><a href="">Location</a></li>
-        </ul>
-      </article>
-      
-      <article>
-        <h4>Permalinks</h4>
-        <ul>
-            <li><a href="#">Véhicules d'occasion</a></li>
-            <li><a href="#">Nos services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Avis</a></li>
-        </ul>
-      </article>
-    </div>
-    <div class="footer__copyright">
-      <small>Copyright &copy;,  GARAGE VINCENT PARROT  </small>
-    </div>
-  </footer>
-  
-  
-  
-  
-
-
-    <script src="script.js"></script>
-</body>
-</html>
- 
- 
-
-
-
-
-                   
-     
+  <?php 
+include 'partials/footer.php'
+?>
