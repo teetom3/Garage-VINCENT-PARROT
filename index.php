@@ -1,5 +1,12 @@
 <?php 
-include 'partials/header.php'
+include 'partials/header.php';
+
+
+$query_voitures = "SELECT * FROM voitures ";
+
+$voitures = mysqli_query($connection, $query_voitures );
+
+
 ?>
 
 
@@ -64,56 +71,17 @@ include 'partials/header.php'
   <section class="vehicle-sales-banner">
     <h2>Vente de véhicules d'occasion</h2>
   </section>
-  
+  <?php while($voiture = mysqli_fetch_assoc($voitures)) : ?>
   <section class="vehicle-sales">
     <div class="vehicle-card">
-      <h3>Marque et Modèle</h3>
-      <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-      <p>Prix : XXXX €</p>
-      <p>Kilométrage : XXXX km</p>
-      <p>Année de mise en circulation : XXXX</p>
+      <h3><?=$voiture['marque_modele']?></h3>
+      <img src="./images/<?=$voiture['image']?>" alt="Voiture d'occasion">
+      <p><b>Prix:</b> <?=$voiture['prix']?>€</p>
+      <p><b>Kilométrage:</b> <?=$voiture['kilometrage']?>km</p>
+      <p><b>Année de mise en circulation :</b> <?=$voiture['annee']?></p>
     </div>
 
-    <div class="vehicle-card">
-        <h3>Marque et Modèle</h3>
-        <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-        <p>Prix : XXXX €</p>
-        <p>Kilométrage : XXXX km</p>
-        <p>Année de mise en circulation : XXXX</p>
-      </div>
-
-      <div class="vehicle-card">
-        <h3>Marque et Modèle</h3>
-        <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-        <p>Prix : XXXX €</p>
-        <p>Kilométrage : XXXX km</p>
-        <p>Année de mise en circulation : XXXX</p>
-      </div>
-
-      <div class="vehicle-card">
-        <h3>Marque et Modèle</h3>
-        <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-        <p>Prix : XXXX €</p>
-        <p>Kilométrage : XXXX km</p>
-        <p>Année de mise en circulation : XXXX</p>
-      </div>
-
-
-      <div class="vehicle-card">
-        <h3>Marque et Modèle</h3>
-        <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-        <p>Prix : XXXX €</p>
-        <p>Kilométrage : XXXX km</p>
-        <p>Année de mise en circulation : XXXX</p>
-      </div>
-
-      <div class="vehicle-card">
-        <h3>Marque et Modèle</h3>
-        <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-        <p>Prix : XXXX €</p>
-        <p>Kilométrage : XXXX km</p>
-        <p>Année de mise en circulation : XXXX</p>
-      </div>
+    <?php endwhile ?>
     <!-- Ajoutez plus de cards de voitures ici -->
   </section>
 

@@ -41,7 +41,7 @@ require './config/database.php';
         <li><a href="<?=ROOT_URL?>admin/add-users.php">Ajouter Utilisateurs</a></li>
         <li><a href="<?=ROOT_URL?>admin/manage-avis.php">Manager Avis</a></li>
         <li><a href="<?=ROOT_URL?>admin/edit-horaires.php">Editer Horaires</a></li>
-        <li class="hideOnMobile"><a href="#">Deconnexion</a></li>
+        <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/logout.php">Deconnexion</a></li>
     </ul>
 
     <ul class="navlist">

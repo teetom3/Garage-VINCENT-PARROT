@@ -6,13 +6,20 @@
   text-decoration: none;
 }
 
+h3{
+  font-family: "BARLOW";
+}
 
 h2{
   font-family: "BARLOW";
   text-align: center;
 }
 
-
+.alert__message-succes {
+  background: green;
+  color: #f2f2f2;
+  font-family: "BARLOW";
+}
 /*************************NAV BAR *****************************/
 
 nav{

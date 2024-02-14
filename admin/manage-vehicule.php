@@ -1,5 +1,12 @@
 <?php 
 include 'partials/header.php';
+
+
+
+$query = "SELECT * FROM voitures ";
+
+$voitures = mysqli_query($connection, $query );
+
 ?>
 
 
@@ -18,15 +25,17 @@ include 'partials/header.php';
                 </tr>
             </thead>
             <tbody>
+            <?php while($voiture = mysqli_fetch_assoc($voitures)) : ?>
                 <tr>
-                    <td>Toyota Corolla</td>
-                    <td>50,000 km</td>
-                    <td>15,000 €</td>
+                    <td><?=$voiture['marque_modele']?></td>
+                    <td><?=$voiture['kilometrage']?></td>
+                    <td><?=$voiture['prix']?>€</td>
                     <td>
                         <button class="edit-btn">Editer</button>
                         <button class="delete-btn">Supprimer</button>
                     </td>
                 </tr>
+                <?php endwhile?>
                 <!-- Ajouter d'autres lignes de voitures ici -->
             </tbody>
         </table>

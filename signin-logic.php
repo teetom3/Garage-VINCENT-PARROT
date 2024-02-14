@@ -3,7 +3,7 @@ require 'config/database.php' ;
 
 if(isset($_POST['submit'])) {
     // get form data 
-    $username_email = filter_var($_POST['username_email'],
+    $email = filter_var($_POST['email'],
     FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $password = filter_var($_POST['password'],
     FILTER_SANITIZE_FULL_SPECIAL_CHARS);

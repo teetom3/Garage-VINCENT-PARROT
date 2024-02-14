@@ -9,14 +9,10 @@ include 'partials/header.php';
 
 <h2>Ajouter un véhicule</h2>
 
-<form class="formulaire" action="ajouter_vehicule.php" method="POST" enctype="multipart/form-data">
+<form class="formulaire" action="<?=ROOT_URL?>admin/add-vehicule-logic.php" method="POST" enctype="multipart/form-data">
     <div class="form-group">
-        <label for="modele">Modèle :</label>
-        <input type="text" id="modele" name="modele" required>
-    </div>
-    <div class="form-group">
-        <label for="marque">Marque :</label>
-        <input type="text" id="marque" name="marque" required>
+        <label for="modele">Marque et Modèle :</label>
+        <input type="text" id="modele" name="marque_modele" required>
     </div>
     <div class="form-group">
         <label for="annee">Année de mise en circulation :</label>
@@ -35,10 +31,10 @@ include 'partials/header.php';
         <textarea id="description" name="description" rows="4" required></textarea>
     </div>
     <div class="form-group">
-        <label for="photos">Ajouter des photos :</label>
-        <input type="file" id="photos" name="photos[]" accept="image/*" multiple>
+        <label for="photo">Ajouter des photos :</label>
+        <input type="file" id="photos" name="image" >
     </div>
-    <button type="submit">Ajouter</button>
+    <button type="submit" name="submit">Ajouter</button>
 </form>
 
 

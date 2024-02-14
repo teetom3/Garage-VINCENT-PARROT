@@ -4,7 +4,7 @@ include 'partials/header.php'
 
 
 <div class="login-container">
-    <form class="login-form" action="<?ROOT_URL?>signin-logic.php" method="POST">
+    <form class="login-form" action="<?=ROOT_URL?>signin-logic.php" method="POST">
         <h2>Connexion</h2>
         <div class="input-group">
             <label for="username">Email</label>
@@ -14,7 +14,7 @@ include 'partials/header.php'
             <label for="password">Mot de passe</label>
             <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
         </div>
-        <button type="submit">Connexion</button>
+        <button type="submit" name="submit">Connexion</button>
     </form>
 </div>
 
