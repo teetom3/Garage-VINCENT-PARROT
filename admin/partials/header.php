@@ -36,23 +36,25 @@ require './config/database.php';
     <ul class="sidebar">
       <li class="btn_close"><a href="#" ><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
       <li><a href="<?=ROOT_URL?>admin/manage-vehicule.php" >Manager Véhicules</a></li>
-        <li><a href="<?=ROOT_URL?>admin/add-vehicule.php">Ajouter Véhicules</a></li>
+      <li><a href="<?=ROOT_URL?>admin/manage-avis.php">Manager Avis</a></li>
+      <li><a href="<?=ROOT_URL?>admin/manage-services.php">Manager services</a></li>
+      <li ><a href="<?=ROOT_URL?>admin/logout.php">Deconnexion</a></li>
+      <?php if(isset($_SESSION['user_is_admin'])):?>
         <li><a href="<?=ROOT_URL?>admin/manage-utilisateurs.php">Manager Utilisateurs</a></li>
-        <li><a href="<?=ROOT_URL?>admin/manage-services.php">Manager services</a></li>
-        <li><a href="<?=ROOT_URL?>admin/manage-avis.php">Manager Avis</a></li>
         <li><a href="<?=ROOT_URL?>admin/edit-horaires.php">Editer Horaires</a></li>
-        <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/logout.php">Deconnexion</a></li>
+        <?php endif?>
     </ul>
 
     <ul class="navlist">
         <li><a href="<?=ROOT_URL?>admin/manage-vehicule.php"  >VINCENT PARROT</a></li>      
         <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/manage-vehicule.php" >Manager Véhicules</a></li>
-        <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/add-vehicule.php">Ajouter Véhicules</a></li>
-        <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/manage-utilisateurs.php">Manager Utilisateurs</a></li>
-        <li class="hideOnMobile" ><a href="<?=ROOT_URL?>admin/manage-services.php">Manager services</a></li>
         <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/manage-avis.php">Manager Avis</a></li>
-        <li class="hideOnMobile" ><a href="<?=ROOT_URL?>admin/edit-horaires.php">Editer Horaires</a></li>
+        <li class="hideOnMobile" ><a href="<?=ROOT_URL?>admin/manage-services.php">Manager services</a></li>
         <li class="hideOnMobile"><a href="#">Deconnexion</a></li>
+        <?php if(isset($_SESSION['user_is_admin'])):?>
+        <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/manage-utilisateurs.php">Manager Utilisateurs</a></li>
+        <li class="hideOnMobile" ><a href="<?=ROOT_URL?>admin/edit-horaires.php">Editer Horaires</a></li>
+        <?php endif?>
       <li class="btn_nav"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
     </ul>
     

@@ -13,7 +13,7 @@ $voitures = mysqli_query($connection, $query );
 
 
 <section class="dashboard">
-    <h2>Tableau de Bord - Véhicules en Vente</h2> <button class="add-users">Ajouter un vehicule</button>
+    <h2>Tableau de Bord - Véhicules en Vente</h2> <button class="add-users"><a href="<?=ROOT_URL?>admin/add-vehicule.php">Ajouter un vehicule</a></button>
     <div class="table-container">
         <table>
             <thead>
