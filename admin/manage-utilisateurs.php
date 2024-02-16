@@ -3,9 +3,9 @@ include 'partials/header.php';
 
 //fetch users from database but not current user 
 
-$current_admin_id = $_SESSION['user-id'];
 
-$query = "SELECT * FROM users WHERE NOT id=$current_admin_id";
+
+$query = "SELECT * FROM users ";
 
 $users = mysqli_query($connection, $query );
 
@@ -20,7 +20,7 @@ $users = mysqli_query($connection, $query );
             </p>
         </div>
         <?php endif ?>
-    <h2>Tableau de Bord - Utilisateurs</h2> <button class="add-users">Ajouter un Utilisateur</button>
+    <h2>Tableau de Bord - Utilisateurs</h2> <button class="add-users"><a href="<?=ROOT_URL?>admin/add-users.php">Ajouter Utilisateurs</a></button>
     
     <div class="table-container">
         <table>

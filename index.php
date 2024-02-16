@@ -6,6 +6,10 @@ $query_voitures = "SELECT * FROM voitures ";
 
 $voitures = mysqli_query($connection, $query_voitures );
 
+$query_services ="SELECT * FROM services";
+
+$services = mysqli_query($connection, $query_services);
+
 
 ?>
 
@@ -38,31 +42,16 @@ $voitures = mysqli_query($connection, $query_voitures );
     <h2>NOS SERVICES</h2>
   </section>
   
-
-  <section class="services">
-    <div class="service-card">
-      <img src="./images/auto-repair-3691962_1280.jpg" alt="Réparation mécanique">
-      <h2>Réparation mécanique</h2>
-      <p>Service complet de réparation mécanique pour tous types de véhicules.</p>
-    </div>
-    
-    <div class="service-card">
-      <img src="./images/auto-repair-shop-1954636_1280.jpg" alt="Vidange">
-      <h2>Vidange</h2>
-      <p>Service de vidange rapide et efficace pour maintenir votre moteur en bonne santé.</p>
-    </div>
-    
-    <div class="service-card">
-      <img src="./images/car-dealer-2138927_1280.jpg" alt="Vente de véhicules">
-      <h2>Vente de véhicules</h2>
-      <p>Découvrez notre sélection de véhicules d'occasion de haute qualité.</p>
-    </div>
   
+  <section class="services">
+  <?php while($service = mysqli_fetch_assoc($services)) : ?>
     <div class="service-card">
-      <img src="./images/tire-1749597_1280.jpg" alt="Pneus">
-      <h2>Pneus</h2>
-      <p>Large choix de pneus de qualité pour tous types de véhicules.</p>
+      <img src="./images/<?=$service['image']?>" alt="Réparation mécanique">
+      <h2><?=$service['service']?></h2>
+      <p><?=$service['description']?></p>
     </div>
+    
+    <?php endwhile ?>
   </section>
   
 <!---SECTION VEHICULES -------------------------------------->
@@ -71,8 +60,9 @@ $voitures = mysqli_query($connection, $query_voitures );
   <section class="vehicle-sales-banner">
     <h2>Vente de véhicules d'occasion</h2>
   </section>
-  <?php while($voiture = mysqli_fetch_assoc($voitures)) : ?>
+  
   <section class="vehicle-sales">
+  <?php while($voiture = mysqli_fetch_assoc($voitures)) : ?>
     <div class="vehicle-card">
       <h3><?=$voiture['marque_modele']?></h3>
       <img src="./images/<?=$voiture['image']?>" alt="Voiture d'occasion">

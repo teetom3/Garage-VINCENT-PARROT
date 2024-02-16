@@ -38,7 +38,7 @@ require './config/database.php';
       <li><a href="<?=ROOT_URL?>admin/manage-vehicule.php" >Manager Véhicules</a></li>
         <li><a href="<?=ROOT_URL?>admin/add-vehicule.php">Ajouter Véhicules</a></li>
         <li><a href="<?=ROOT_URL?>admin/manage-utilisateurs.php">Manager Utilisateurs</a></li>
-        <li><a href="<?=ROOT_URL?>admin/add-users.php">Ajouter Utilisateurs</a></li>
+        <li><a href="<?=ROOT_URL?>admin/manage-services.php">Manager services</a></li>
         <li><a href="<?=ROOT_URL?>admin/manage-avis.php">Manager Avis</a></li>
         <li><a href="<?=ROOT_URL?>admin/edit-horaires.php">Editer Horaires</a></li>
         <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/logout.php">Deconnexion</a></li>
@@ -49,7 +49,7 @@ require './config/database.php';
         <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/manage-vehicule.php" >Manager Véhicules</a></li>
         <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/add-vehicule.php">Ajouter Véhicules</a></li>
         <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/manage-utilisateurs.php">Manager Utilisateurs</a></li>
-        <li class="hideOnMobile" ><a href="<?=ROOT_URL?>admin/add-users.php">Ajouter Utilisateurs</a></li>
+        <li class="hideOnMobile" ><a href="<?=ROOT_URL?>admin/manage-services.php">Manager services</a></li>
         <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/manage-avis.php">Manager Avis</a></li>
         <li class="hideOnMobile" ><a href="<?=ROOT_URL?>admin/edit-horaires.php">Editer Horaires</a></li>
         <li class="hideOnMobile"><a href="#">Deconnexion</a></li>

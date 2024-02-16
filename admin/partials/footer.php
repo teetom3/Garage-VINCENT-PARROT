@@ -1,17 +1,32 @@
  <!-----------DEBUT DU FOOTER  ---------------->
+ <?php 
+ 
+ $sql = "SELECT jour_semaine, description FROM horaires";
+$result = $connection->query($sql);
+
+// Créer un tableau associatif pour stocker les descriptions par jour
+$horaires = array();
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $horaires[$row['jour_semaine']] = $row['description'];
+    }
+}
+?>
+
  <footer class="footer">
     <div class="container footer__container">
 
-        <div class="opening-hours">
+    <div class="opening-hours">
             <h4>Horaires d'ouverture</h4>
-            <p>Lundi : </p>
-            <p>Mardi : </p>
-            <p>Mercredi:  </p>
-            <p>Jeudi :  </p>
-            <p>Vendredi : </p>
-            <p>Samedi : </p>
-            <p>Dimanche:</p>
+            <p>Lundi : <?=$horaires['Lundi']?></p>
+            <p>Mardi : <?=$horaires['Mardi']?></p>
+            <p>Mercredi:  <?=$horaires['Mercredi']?></p>
+            <p>Jeudi :  <?=$horaires['Jeudi']?></p>
+            <p>Vendredi : <?=$horaires['Vendredi']?></p>
+            <p>Samedi : <?=$horaires['Samedi']?></p>
+            <p>Dimanche: <?=$horaires['Dimanche']?></p>
           </div>
+
 
           
       <article>
