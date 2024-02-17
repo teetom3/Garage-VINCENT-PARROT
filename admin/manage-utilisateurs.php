@@ -20,7 +20,7 @@ $users = mysqli_query($connection, $query );
             </p>
         </div>
         <?php endif ?>
-    <h2>Tableau de Bord - Utilisateurs</h2> <button class="add-users"><a href="<?=ROOT_URL?>admin/add-users.php">Ajouter Utilisateurs</a></button>
+    <h2>Tableau de Bord - Utilisateurs</h2> <a href="<?=ROOT_URL?>admin/add-users.php"><button class="add-users">Ajouter Utilisateurs</button></a>
     
     <div class="table-container">
         <table>

@@ -15,7 +15,7 @@ $services = mysqli_query($connection, $query );
             </p>
         </div>
         <?php endif ?>
-    <h2>Tableau de Bord - Services</h2> <button ><a href="<?=ROOT_URL?>admin/add-service.php">Ajouter un services</a></button>
+    <h2>Tableau de Bord - Services</h2> <a href="<?=ROOT_URL?><button >admin/add-service.php">Ajouter un services</button></a>
     <div class="table-container">
         <table>
             <thead>

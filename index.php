@@ -11,10 +11,21 @@ $query_services ="SELECT * FROM services";
 $services = mysqli_query($connection, $query_services);
 
 
+$query_avis ="SELECT * FROM avis WHERE publication = 1";
+
+$avis_publie = mysqli_query($connection,$query_avis);
+
 ?>
 
 
-
+<?php if(isset($_SESSION['add-avis-success'])) : // shows if add avis was sucessful?>
+        <div class="alert__message-succes">
+            <p>
+                <?=$_SESSION['add-avis-success'] ;
+                unset($_SESSION['add-avis-success']);?>
+            </p>
+        </div>
+        <?php endif ?>
 
 
 <!-----------------FIN DE LA NAV-->
@@ -63,7 +74,7 @@ $services = mysqli_query($connection, $query_services);
   
   <section class="vehicle-sales">
   <?php while($voiture = mysqli_fetch_assoc($voitures)) : ?>
-    <div class="vehicle-card">
+    <div class="service-card">
       <h3><?=$voiture['marque_modele']?></h3>
       <img src="./images/<?=$voiture['image']?>" alt="Voiture d'occasion">
       <p><b>Prix:</b> <?=$voiture['prix']?>€</p>
@@ -78,35 +89,37 @@ $services = mysqli_query($connection, $query_services);
 <!-------------------------SECTION AVIS CLIENTS------------------------------------->
 
 
-<section class="testimonial-section">
-    <div class="testimonial-banner">
+<div class="services-banner">
       <h2>VOS AVIS COMPTENT POUR NOUS</h2>
     </div>
-  
+
+    <section class="testimonial-section">
     <div class="testimonial-cards">
-      <!-- Card 1 -->
+    <?php while($avis = mysqli_fetch_assoc($avis_publie)) : ?>
       <div class="testimonial-card">
-        <h3>Nom de la personne 1</h3>
-        <div class="stars">★★★★★</div>
-        <p>Texte de l'avis 1.</p>
+        <h3><?=$avis['nom']?></h3>
+        <?php
+// Note de l'avis (à remplacer par la note récupérée de la base de données)
+$note = $avis['note']; // Exemple de note
+
+// Générer les étoiles en HTML en fonction de la note
+$stars_html = '';
+for ($i = 1; $i <= 5; $i++) {
+    if ($i <= $note) {
+        $stars_html .= '★'; // Étoile pleine
+    } else {
+        $stars_html .= '☆'; // Étoile vide
+    }
+}
+
+// Afficher les étoiles
+echo '<div class="stars">' . $stars_html . '</div>';
+?>
+        
+        <p><?=$avis['avis']?>.</p>
       </div>
-  
-      <!-- Card 2 -->
-      <div class="testimonial-card">
-        <h3>Nom de la personne 2</h3>
-        <div class="stars">★★★★★</div>
-        <p>Texte de l'avis 2.</p>
-      </div>
-  
-      <!-- Card 3 -->
-      <div class="testimonial-card">
-        <h3>Nom de la personne 3</h3>
-        <div class="stars">★★★★★</div>
-        <p>Texte de l'avis 3.</p>
-      </div>
-  
-      <!-- Ajoutez plus de testimonial-cards ici -->
-    </div>
+      <?php endwhile ?>
+     
   </section>
   
   

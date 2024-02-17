@@ -1,15 +1,12 @@
 <?php 
-include 'partials/header.php'
+include 'partials/header.php';
+
+
 ?>
-
-
-
-<!---SECTION VEHICULES -------------------------------------->
-
-
-
-
-<form class="vehicule_search" action="search" method="GET">
+<section class="vehicle-sales-banner">
+    <h2>Vente de véhicules d'occasion</h2>
+  </section>
+<form id="vehicule_search"  method="GET">
   <input type="text" name="keyword" placeholder="Recherche par mot-clé">
   <label for="price">Prix :</label>
   <select name="price" id="price">
@@ -36,66 +33,55 @@ include 'partials/header.php'
   <button type="submit">Rechercher</button>
 </form>
 
+  
+  <section class="vehicle-sales">
+  <div id="searchResults"></div>
+  </section>
+<script>
+document.getElementById('vehicule_search').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche le formulaire de se soumettre normalement
+
+    // Récupération des données du formulaire
+    var formData = new FormData(this);
+
+    // Envoi des données du formulaire via AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'search.php', true);
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            // Mise à jour de la partie de la page affichant les résultats
+            document.getElementById('searchResults').innerHTML = xhr.responseText;
+        } else {
+            console.log('Une erreur s\'est produite.');
+        }
+    };
+    xhr.send(formData);
+});
+</script>
+
+
+ 
+
+
+
 
 
 <!----- FIN DE RECHERCHE DES VEHICULES -->
 
 
-<section class="vehicle-sales-banner">
-    <h2>Vente de véhicules d'occasion</h2>
-  </section>
-  
-  <section class="vehicle-sales">
-    <div class="vehicle-card">
-      <h3>Marque et Modèle</h3>
-      <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-      <p>Prix : XXXX €</p>
-      <p>Kilométrage : XXXX km</p>
-      <p>Année de mise en circulation : XXXX</p>
-    </div>
-
-    <div class="vehicle-card">
-        <h3>Marque et Modèle</h3>
-        <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-        <p>Prix : XXXX €</p>
-        <p>Kilométrage : XXXX km</p>
-        <p>Année de mise en circulation : XXXX</p>
-      </div>
-
-      <div class="vehicle-card">
-        <h3>Marque et Modèle</h3>
-        <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-        <p>Prix : XXXX €</p>
-        <p>Kilométrage : XXXX km</p>
-        <p>Année de mise en circulation : XXXX</p>
-      </div>
-
-      <div class="vehicle-card">
-        <h3>Marque et Modèle</h3>
-        <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-        <p>Prix : XXXX €</p>
-        <p>Kilométrage : XXXX km</p>
-        <p>Année de mise en circulation : XXXX</p>
-      </div>
 
 
-      <div class="vehicle-card">
-        <h3>Marque et Modèle</h3>
-        <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-        <p>Prix : XXXX €</p>
-        <p>Kilométrage : XXXX km</p>
-        <p>Année de mise en circulation : XXXX</p>
-      </div>
 
-      <div class="vehicle-card">
-        <h3>Marque et Modèle</h3>
-        <img src="./images/car-604019_1280.jpg" alt="Voiture d'occasion">
-        <p>Prix : XXXX €</p>
-        <p>Kilométrage : XXXX km</p>
-        <p>Année de mise en circulation : XXXX</p>
-      </div>
-    <!-- Ajoutez plus de cards de voitures ici -->
-  </section>
+
+
+
+
+
+<!---SECTION VEHICULES -------------------------------------->
+
+
+
+
 
 
 
