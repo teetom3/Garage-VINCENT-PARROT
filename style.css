@@ -587,7 +587,7 @@ padding-bottom: 5px;
 /* Style du tableau */
 
 .dashboard {
-  margin: 40px;
+  margin: 10px;
   padding: 10px;
 }
 
@@ -745,4 +745,14 @@ tr:nth-child(odd) {
     color: white;
     text-align: left;
   }
+}
+@media screen and (max-width: 500px) {
+  .dashboard {
+    width:100%;
+    margin: 10px;
+    padding: 10px;
+  }
+  .table-container {
+    overflow-x: auto;
+}
 }
