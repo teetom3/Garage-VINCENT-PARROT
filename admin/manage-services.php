@@ -14,8 +14,15 @@ $services = mysqli_query($connection, $query );
                 unset($_SESSION['add-services-success']);?>
             </p>
         </div>
+        <?php elseif(isset($_SESSION['delete-service-success'])) :?>
+            <div class="alert__message-succes">
+            <p>
+                <?=$_SESSION['delete-service-success'] ;
+                unset($_SESSION['delete-service-success']);?>
+            </p>
+        </div>
         <?php endif ?>
-    <h2>Tableau de Bord - Services</h2> <a href="<?=ROOT_URL?><button >admin/add-service.php">Ajouter un services</button></a>
+    <h2>Tableau de Bord - Services</h2> <a href="<?=ROOT_URL?>admin/add-service.php"><button >Ajouter un services</button></a>
     <div class="table-container">
         <table>
             <thead>
@@ -33,8 +40,8 @@ $services = mysqli_query($connection, $query );
                     <td><?="{$service['sous_titre']}"?></td>
                     <td><?="{$service['description']}"?></td>
                     <td>
-                        <button class="edit-btn">Editer</button>
-                        <button class="delete-btn">Supprimer</button>
+                       
+                    <a href="<?= ROOT_URL ?>admin/delete-service.php?id=<?= $service['id']?>"><button class="delete-btn">Supprimer</button></a>
                     </td>
                 </tr>
                 <?php endwhile?>

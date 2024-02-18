@@ -19,6 +19,13 @@ $users = mysqli_query($connection, $query );
                 unset($_SESSION['add-user-success']);?>
             </p>
         </div>
+        <?php elseif(isset($_SESSION['delete-user-success'])) : // shows if add user was sucessful?>
+        <div class="alert__message-succes">
+            <p>
+                <?=$_SESSION['delete-user-success'] ;
+                unset($_SESSION['delete-user-success']);?>
+            </p>
+        </div>
         <?php endif ?>
     <h2>Tableau de Bord - Utilisateurs</h2> <a href="<?=ROOT_URL?>admin/add-users.php"><button class="add-users">Ajouter Utilisateurs</button></a>
     
@@ -39,8 +46,8 @@ $users = mysqli_query($connection, $query );
                     <td><?="{$user['firstname']}"?></td>
                     <td><?="{$user['email']}"?></td>
                     <td>
-                        <button class="edit-btn">Editer</button>
-                        <button class="delete-btn">Supprimer</button>
+                        
+                    <a href="<?= ROOT_URL ?>admin/delete-user.php?id=<?= $user['id']?>"><button class="delete-btn">Supprimer</button></a>
                     </td>
                 </tr>
                 <?php endwhile?>

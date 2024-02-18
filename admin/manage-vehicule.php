@@ -13,6 +13,14 @@ $voitures = mysqli_query($connection, $query );
 
 
 <section class="dashboard">
+<?php if(isset($_SESSION['delete-voiture-success'])) : // shows if add service was sucessful?>
+        <div class="alert__message-succes">
+            <p>
+                <?=$_SESSION['delete-voiture-success'] ;
+                unset($_SESSION['delete-voiture-success']);?>
+            </p>
+        </div>
+        <?php endif ?>
     <h2>Tableau de Bord - Véhicules en Vente</h2> <a href="<?=ROOT_URL?>admin/add-vehicule.php"><button class="add-users">Ajouter un vehicule</button></a>
     <div class="table-container">
         <table>
