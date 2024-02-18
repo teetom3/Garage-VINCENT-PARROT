@@ -22,8 +22,7 @@ Configuration de la Base de Données
 
 Ouvrez phpMyAdmin en accédant à http://localhost/phpmyadmin dans votre navigateur.
 Créez une nouvelle base de données MySQL pour le projet.
-Importez le fichier de base de données fourni (s'il existe) ou exécutez les migrations pour créer les tables nécessaires.
-Configuration de l'Environnement
+Executez les lignes de codes ci-joint dans le document word SQL ecris a la main GARAGE PARROT
 
 Renommez le fichier .env.example du projet en .env.
 Modifiez les variables d'environnement dans le fichier .env pour correspondre à votre configuration locale, y compris les informations de base de données.
