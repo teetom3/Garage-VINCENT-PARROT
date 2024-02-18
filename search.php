@@ -48,7 +48,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo "<div class='service-card'>";
         echo "<h3>".$row['marque_modele']."</h3>";
-        echo "<img src='./images/".$row['image']."' alt='Voiture d occasion'>";
+        echo "<a href='" . ROOT_URL . "vehicule-single.php?id=" . $row['id'] . "'><img src='./images/" . $row['image'] . "' alt='Voiture d occasion'></a>";
         echo "<p><b>Prix:</b> ".$row['prix']."€</p>";
         echo "<p><b>Kilométrage:</b> ".$row['kilometrage']."km</p>";
         echo "<p><b>Année de mise en circulation :</b> ".$row['annee']."</p>";

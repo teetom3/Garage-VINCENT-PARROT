@@ -38,6 +38,7 @@ require './config/database.php';
       <li><a href="<?=ROOT_URL?>admin/manage-vehicule.php" >Manager Véhicules</a></li>
       <li><a href="<?=ROOT_URL?>admin/manage-avis.php">Manager Avis</a></li>
       <li><a href="<?=ROOT_URL?>admin/manage-services.php">Manager services</a></li>
+      <li><a href="<?=ROOT_URL?>admin/manage-contact.php">Messages</a></li>
       <li ><a href="<?=ROOT_URL?>admin/logout.php">Deconnexion</a></li>
       <?php if(isset($_SESSION['user_is_admin'])):?>
         <li><a href="<?=ROOT_URL?>admin/manage-utilisateurs.php">Manager Utilisateurs</a></li>
@@ -50,7 +51,8 @@ require './config/database.php';
         <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/manage-vehicule.php" >Manager Véhicules</a></li>
         <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/manage-avis.php">Manager Avis</a></li>
         <li class="hideOnMobile" ><a href="<?=ROOT_URL?>admin/manage-services.php">Manager services</a></li>
-        <li class="hideOnMobile"><a href="#">Deconnexion</a></li>
+        <li class="hideOnMobile" ><a href="<?=ROOT_URL?>admin/manage-contact.php">Messages</a></li>
+        <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/logout.php">Deconnexion</a></li>
         <?php if(isset($_SESSION['user_is_admin'])):?>
         <li class="hideOnMobile"><a href="<?=ROOT_URL?>admin/manage-utilisateurs.php">Manager Utilisateurs</a></li>
         <li class="hideOnMobile" ><a href="<?=ROOT_URL?>admin/edit-horaires.php">Editer Horaires</a></li>

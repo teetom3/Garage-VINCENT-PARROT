@@ -76,7 +76,7 @@ $avis_publie = mysqli_query($connection,$query_avis);
   <?php while($voiture = mysqli_fetch_assoc($voitures)) : ?>
     <div class="service-card">
       <h3><?=$voiture['marque_modele']?></h3>
-      <img src="./images/<?=$voiture['image']?>" alt="Voiture d'occasion">
+      <a href="<?= ROOT_URL ?>vehicule-single.php?id=<?= $voiture['id']?>"><img src="./images/<?=$voiture['image']?>" alt="Voiture d'occasion"></a>
       <p><b>Prix:</b> <?=$voiture['prix']?>€</p>
       <p><b>Kilométrage:</b> <?=$voiture['kilometrage']?>km</p>
       <p><b>Année de mise en circulation :</b> <?=$voiture['annee']?></p>

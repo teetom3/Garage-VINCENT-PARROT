@@ -38,12 +38,8 @@ include 'partials/header.php';
   <div id="searchResults"></div>
   </section>
 <script>
-document.getElementById('vehicule_search').addEventListener('submit', function(event) {
-    event.preventDefault(); // Empêche le formulaire de se soumettre normalement
-
-    // Récupération des données du formulaire
-    var formData = new FormData(this);
-
+// Fonction pour effectuer la requête AJAX
+function performAjaxRequest(formData) {
     // Envoi des données du formulaire via AJAX
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'search.php', true);
@@ -56,6 +52,23 @@ document.getElementById('vehicule_search').addEventListener('submit', function(e
         }
     };
     xhr.send(formData);
+}
+
+// Appel de la fonction au chargement de la page
+document.addEventListener('DOMContentLoaded', function() {
+    var formData = new FormData(); // Vous pouvez également initialiser avec des données par défaut si nécessaire
+    performAjaxRequest(formData);
+});
+
+// Ajout d'un écouteur d'événement sur la soumission du formulaire
+document.getElementById('vehicule_search').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche le formulaire de se soumettre normalement
+
+    // Récupération des données du formulaire
+    var formData = new FormData(this);
+
+    // Appel de la fonction pour effectuer la requête AJAX
+    performAjaxRequest(formData);
 });
 </script>
 

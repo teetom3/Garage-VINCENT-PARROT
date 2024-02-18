@@ -31,8 +31,8 @@ $voitures = mysqli_query($connection, $query );
                     <td><?=$voiture['kilometrage']?></td>
                     <td><?=$voiture['prix']?>€</td>
                     <td>
-                        <button class="edit-btn">Editer</button>
-                        <button class="delete-btn">Supprimer</button>
+                        
+                        <a href="<?= ROOT_URL ?>admin/delete-vehicule.php?id=<?= $voiture['id']?>"><button class="delete-btn">Supprimer</button></a>
                     </td>
                 </tr>
                 <?php endwhile?>

@@ -84,6 +84,7 @@ nav li:first-child{
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  overflow-y: auto;
 }
 
 
@@ -493,7 +494,29 @@ textarea {
 textarea {
   height: 150px;
 }
-
+/***************************VEHICULE SINGLE ************************************/
+.voiture_single img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+}
+.voiture_single {
+  display: flex;
+}
+.information {
+  margin: 15px;
+  margin-top: 10vh;
+  font-family: "RAJDHANI";
+}
+.information p {
+  
+padding-top: 5px;
+padding-bottom: 5px;
+}
+.information h3 {
+  align-items: center;
+}
 
 /*******************************PAGE AVIS ***************************/ 
 
@@ -595,28 +618,7 @@ tr:nth-child(odd) {
   background-color: #f2f2f2; /* Fond gris clair pour les lignes impaires */
 }
 
-/* Style pour rendre le tableau responsive */
-@media screen and (max-width: 600px) {
-  /* Rétablir la bordure uniquement sur les cellules nécessaires */
-  td, th {
-    border: none;
-    border-bottom: 1px solid #333;
-    padding: 10px;
-    display: table-cell; /* Maintenir les cellules en ligne */
-  }
 
-  /* Style des lignes impaires */
-  tr:nth-child(odd) {
-    background-color: #f2f2f2; /* Fond gris clair pour les lignes impaires */
-  }
-
-  /* Entête de colonne */
-  th {
-    background-color: #333;
-    color: white;
-    text-align: left;
-  }
-}
 
 /******FORMULAIRE *************************************/ 
 
@@ -628,6 +630,8 @@ tr:nth-child(odd) {
   text-align: center;
 
 }
+
+
 
   /*************** MEDIA QUERYS ****************************************************************/
 
@@ -714,5 +718,31 @@ tr:nth-child(odd) {
       color: white;
       text-align: left;
     }
+
+    .voiture_single {
+      flex-direction: column;
+    }
+
   }
-  
+  /* Style pour rendre le tableau responsive */
+@media screen and (max-width: 600px) {
+  /* Rétablir la bordure uniquement sur les cellules nécessaires */
+  td, th {
+    border: none;
+    border-bottom: 1px solid #333;
+    padding: 10px;
+    display: table-cell; /* Maintenir les cellules en ligne */
+  }
+
+  /* Style des lignes impaires */
+  tr:nth-child(odd) {
+    background-color: #f2f2f2; /* Fond gris clair pour les lignes impaires */
+  }
+
+  /* Entête de colonne */
+  th {
+    background-color: #333;
+    color: white;
+    text-align: left;
+  }
+}
