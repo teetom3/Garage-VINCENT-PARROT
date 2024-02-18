@@ -1,3 +1,12 @@
+Vous pouvez RETROUVEZ l'application GARAGE VINCENT PARROT  online sur     https://teetom.eu/
+
+compte administrateur : vincent02@parrot.fr
+mdp : vincentparrot 
+
+
+
+
+
 Guide de Déploiement sur XAMPP
 Ce guide vous explique comment déployer le projet localement en utilisant XAMPP sur votre machine. Suivez attentivement les étapes ci-dessous pour un déploiement réussi.
 
@@ -22,7 +31,14 @@ Configuration de la Base de Données
 
 Ouvrez phpMyAdmin en accédant à http://localhost/phpmyadmin dans votre navigateur.
 Créez une nouvelle base de données MySQL pour le projet.
+
 Executez les lignes de codes ci-joint dans le document word SQL ecris a la main GARAGE PARROT
+
+Vous pouvez inserer un nouvelle utilisateur admin manuellement a l'interieur de votre base de donnée garage , dans la table users grace à cette requete : 
+
+INSERT INTO users (lastname, firstname , email , password , is_admin  )VALUES ('','','','', 1 )
+
+Remplacez les '' par les valeurs que vous voulez 
 
 Renommez le fichier .env.example du projet en .env.
 Modifiez les variables d'environnement dans le fichier .env pour correspondre à votre configuration locale, y compris les informations de base de données.
