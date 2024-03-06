@@ -1,6 +1,6 @@
 Vous pouvez RETROUVEZ l'application GARAGE VINCENT PARROT  online sur     https://teetom.eu/
 
-compte administrateur : vincent02@parrot.fr
+compte administrateur : vincent02@parrot.com
 mdp : vincentparrot 
 
 
